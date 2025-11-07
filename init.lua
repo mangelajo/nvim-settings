@@ -30,6 +30,13 @@ vim.g.mapleader = " "
 require("lazy").setup({
   spec = {
     {
+      "L3MON4D3/LuaSnip",
+      -- follow latest release.
+      version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+      -- install jsregexp (optional!:).
+      build = "make install_jsregexp"
+    },
+    {
       "greggh/claude-code.nvim",
       dependencies = {
         "nvim-lua/plenary.nvim", -- Required for git operations
